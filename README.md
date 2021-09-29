@@ -1,6 +1,5 @@
 # A Simple calculator app following Kevin Powell & Zell Liew's Tutorial
 
-![source](https://www.youtube.com/watch?v=f0SG2j6d-Kg&ab_channel=KevinPowell)
 
 ## Table of contents
 
