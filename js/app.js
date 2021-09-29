@@ -16,7 +16,7 @@ keys.addEventListener("click", event => {
     //is this a number key?
 
     if (type === "number") {
-        if (displayValue === "0" || previousKeyType === "operator" ) {
+        if (displayValue === "0" || previousKeyType === "operator" || display.textContent === "NaN") {
             display.textContent = keyValue
         } else {
             display.textContent = displayValue + keyValue
