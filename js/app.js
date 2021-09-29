@@ -11,7 +11,7 @@ keys.addEventListener("click", event => {
     const keyValue = key.textContent
     const displayValue = display.textContent
     const {type} = key.dataset
-    const {previousKeyType } = calculator.dataset;
+    const {previousKeyType } = calculator.dataset
     
     //is this a number key?
 
@@ -27,8 +27,8 @@ keys.addEventListener("click", event => {
             }
         }
     }
- 
-    // is this a operator key? 
+
+    // is this an operator key? 
 
     if ( type === "operator") {
         //perform operation
@@ -49,7 +49,7 @@ keys.addEventListener("click", event => {
        if (operator) display.textContent = calculate(firstNumber,operator,secondNumber)
    }
 
-   if (type === "clear" || display.textContent === "NaN") {
+   if (type === "clear") {
     const clear = keys.querySelector("[data-type='clear']") 
     
     clear.addEventListener("click", function() {
@@ -64,6 +64,8 @@ keys.addEventListener("click", event => {
    calculator.dataset.previousKeyType = type
 
 })
+
+
 
 //calculate function 
 
