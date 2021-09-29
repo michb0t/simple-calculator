@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/michb0t/simple-calculator)
-- Live Site URL: [Add live site URL here](https://michb0t.github.io/simple-calculator/)
+- Solution URL: [Github Repo](https://github.com/michb0t/simple-calculator)
+- Live Site URL: [Live Solution Link](https://michb0t.github.io/simple-calculator/)
 
 ## My process
 
