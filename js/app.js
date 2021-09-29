@@ -16,13 +16,18 @@ keys.addEventListener("click", event => {
     //is this a number key?
 
     if (type === "number") {
-        if (displayValue === "0" || previousKeyType === "operator" || display.textContent === "NaN") {
+        if (displayValue === "0" || previousKeyType === "operator") {
             display.textContent = keyValue
+
+        } else if (display.textContent === "NaN" || display.textContent === "Infinity") {
+            display.textContent = keyValue        
         } else {
-            display.textContent = displayValue + keyValue
+            if ( display.textContent !== "NaN" && display.textContent !== "Infinity") {
+                display.textContent = displayValue + keyValue
+            }
         }
     }
-
+ 
     // is this a operator key? 
 
     if ( type === "operator") {
@@ -59,8 +64,6 @@ keys.addEventListener("click", event => {
    calculator.dataset.previousKeyType = type
 
 })
-
-
 
 //calculate function 
 
