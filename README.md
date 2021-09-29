@@ -1,6 +1,6 @@
 # A Simple calculator app following Kevin Powell & Zell Liew's Tutorial
 
-![source] (https://www.youtube.com/watch?v=f0SG2j6d-Kg&ab_channel=KevinPowell)
+![source](https://www.youtube.com/watch?v=f0SG2j6d-Kg&ab_channel=KevinPowell)
 
 ## Table of contents
 
@@ -27,75 +27,76 @@ Users should be able to:
 
 ### Screenshot
 
+![image](https://user-images.githubusercontent.com/81781093/135242360-6cc1248e-d55b-4878-9bff-8041cac03687.png)
+![image](https://user-images.githubusercontent.com/81781093/135242419-209e5bc9-5729-4ec7-9dc0-1bf2906d64f4.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/michb0t/simple-calculator)
+- Live Site URL: [Add live site URL here](https://michb0t.github.io/simple-calculator/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- HTML
+- CSS
+- Vanilla Javascript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Refreshing way to style using the Grid layout (i generally use flex) and applying simple javascript for calculation logic.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+```html - using data-key and data-type attributes rather than classes. 
+<button data-key="plus" data-type="operator">+</button>
+<button data-type="number" class="one">1</button>
 ```
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+
+[data-type="operator"]:active, 
+[data-type="number"]:active, [data-type="clear"]:active {
+    background-color: var(--grey-200)
 }
+
+
+.calculator_keys {
+    background-color:var(--grey-200);
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: 
+    ". . . ."
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero decimal clear equal"
+}
+
+
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+if ( type === "operator") {
+    //perform operation
+    const operatorKeys = keys.querySelectorAll('[data-type="operator"]')
+    operatorKeys.forEach(el => el.dataset.state = '')
+    key.dataset.state = "selected"
+    calculator.dataset.firstNumber = displayValue
+    calculator.dataset.operator = key.dataset.key
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Michelle Pham](https://www.linkedin.com/in/michelle-pham-2a766b101/)
+- Twitter - [@michbot7](https://twitter.com/michbot7)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Special thanks to Kevin Powell and Zell Liew! 
+Twitter: https://twitter.com/zellwk
+Twitter: https://twitter.com/KevinJPowell
+Codepen: https://codepen.io/kevinpowell/
