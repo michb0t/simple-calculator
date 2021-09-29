@@ -44,7 +44,7 @@ keys.addEventListener("click", event => {
        if (operator) display.textContent = calculate(firstNumber,operator,secondNumber)
    }
 
-   if (type === "clear") {
+   if (type === "clear" || display.textContent === "NaN") {
     const clear = keys.querySelector("[data-type='clear']") 
     
     clear.addEventListener("click", function() {
